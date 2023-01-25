@@ -6,6 +6,8 @@ using System.Windows.Forms;
 using System;
 using System.Linq;
 using Report;
+using Report.Forms;
+using Report.Utils;
 
 namespace MinvoiceReport
 {
@@ -27,6 +29,7 @@ namespace MinvoiceReport
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
+            LoadingUtils.ShowProgress();
             string username = usernameTxt.Text;
             string password = passwordTxt.Text;
             string taxCode = taxCodeTxt.Text;
@@ -40,6 +43,7 @@ namespace MinvoiceReport
             Constant.REPORT_INFO = _reportService.GetReportInfos();
             _reportService.SaveAllReports(Constant.REPORT_INFO.Select(wd => wd.WindowId).ToList());
             var reportView = Program.Container.Resolve<ReportView>();
+            LoadingUtils.HideProgress();
             reportView.Show();
             this.Hide();
 

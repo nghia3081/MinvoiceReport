@@ -162,14 +162,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Report.exe" size="118752">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Report.exe" size="269280">
       <assemblyIdentity name="Report" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5DkLdIe+7GuLoCLdEbKVVaOQAduAGCKkR+idD/1PFxQ=</dsig:DigestValue>
+        <dsig:DigestValue>6kppiXVZ4/TWRZxi9Yc0oSrG9jnduc6lxQxRG0ZSHcI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1410,6 +1410,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>/8VS4OOwm918npo20FtmRVivxuFsxKQCvqGx4lqso1o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MInvLoading.gif" size="148154">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ZKEb0oCdyB5KkrkPztvu+IGdk9uG/B+3KarrHMn0zWk=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

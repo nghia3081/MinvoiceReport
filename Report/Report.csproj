@@ -126,6 +126,12 @@
     <Compile Include="Forms\DataFilter.Designer.cs">
       <DependentUpon>DataFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,10 +158,14 @@
     <Compile Include="Utils\Extensions\HttpResponseMessageExtensions.cs" />
     <Compile Include="Utils\Extensions\Object.cs" />
     <Compile Include="Utils\Extensions\String.cs" />
+    <Compile Include="Utils\Loading.cs" />
     <Compile Include="Utils\MessageBoxUtils.cs" />
     <Compile Include="Utils\StringUtils.cs" />
     <EmbeddedResource Include="Forms\DataFilter.resx">
       <DependentUpon>DataFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -191,6 +201,7 @@
   <ItemGroup>
     <Content Include="Resources\lginvoice-01.png" />
     <Content Include="Resources\lginvoice2-01.png" />
+    <Content Include="Resources\MInvLoading.gif" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">

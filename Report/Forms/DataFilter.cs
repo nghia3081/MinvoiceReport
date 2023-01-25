@@ -5,6 +5,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Windows.Forms;
 using System.Drawing;
+using Report.Utils;
 
 namespace MinvoiceReport.Forms
 {
@@ -28,9 +29,9 @@ namespace MinvoiceReport.Forms
                 {
                     case "text":
                         {
-
                             TextBox txtBox = new TextBox() { Name = rpD.Name, Width = this.Width / 3 };
                             txtBox.Location = GetLocation(txtBox.Width, marginVertical, i);
+                            txtBox.Text = rpD.Name.ToLower().Equals("ma_dvcs") ? "VP" : string.Empty; 
                             this.Controls.Add(txtBox);
                             break;
                         }
@@ -132,6 +133,7 @@ namespace MinvoiceReport.Forms
             var dataReport = _reportService.GetReportData(selectedReport.WindowId, dataSubmit);
             if (dataReport != null) Constant.REPORT_DATA = dataReport;
             this.Close();
+            LoadingUtils.ShowProgress();
         }
     }
 }

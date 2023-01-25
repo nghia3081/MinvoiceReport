@@ -41,7 +41,6 @@ namespace MinvoiceReport.Forms
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.reportDataGrid = new System.Windows.Forms.DataGridView();
-            this.FormClosed += OnClose;
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reportDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -61,25 +60,25 @@ namespace MinvoiceReport.Forms
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(1426, 28);
+            this.toolStrip1.Size = new System.Drawing.Size(1070, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(130, 25);
+            this.toolStripLabel1.Size = new System.Drawing.Size(103, 22);
             this.toolStripLabel1.Text = "Chọn loại báo cáo";
             // 
             // reportTypeCombo
             // 
             this.reportTypeCombo.Name = "reportTypeCombo";
-            this.reportTypeCombo.Size = new System.Drawing.Size(500, 28);
+            this.reportTypeCombo.Size = new System.Drawing.Size(376, 25);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripButton1
             // 
@@ -87,14 +86,14 @@ namespace MinvoiceReport.Forms
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(62, 25);
+            this.toolStripButton1.Size = new System.Drawing.Size(50, 22);
             this.toolStripButton1.Text = "Refresh";
             this.toolStripButton1.Click += new System.EventHandler(this.RefreshOnClick);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripButton2
             // 
@@ -103,14 +102,14 @@ namespace MinvoiceReport.Forms
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(89, 25);
-            this.toolStripButton2.Text = "Xem in PDF";
-            this.toolStripButton2.Click += ViewPdfOnclick;
+            this.toolStripButton2.Size = new System.Drawing.Size(50, 22);
+            this.toolStripButton2.Text = "Tải PDF";
+            this.toolStripButton2.ToolTipText = "Tải PDF";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripButton3
             // 
@@ -119,30 +118,32 @@ namespace MinvoiceReport.Forms
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(136, 25);
-            this.toolStripButton3.Text = "Tải xuống báo cáo";
+            this.toolStripButton3.Size = new System.Drawing.Size(56, 22);
+            this.toolStripButton3.Text = "Tải Excel";
             // 
             // reportDataGrid
             // 
             this.reportDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.reportDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.reportDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportDataGrid.Location = new System.Drawing.Point(0, 28);
+            this.reportDataGrid.Location = new System.Drawing.Point(0, 25);
+            this.reportDataGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.reportDataGrid.MultiSelect = false;
             this.reportDataGrid.Name = "reportDataGrid";
             this.reportDataGrid.ReadOnly = true;
             this.reportDataGrid.RowHeadersWidth = 51;
             this.reportDataGrid.RowTemplate.Height = 29;
-            this.reportDataGrid.Size = new System.Drawing.Size(1426, 786);
+            this.reportDataGrid.Size = new System.Drawing.Size(1070, 504);
             this.reportDataGrid.TabIndex = 2;
             // 
             // ReportView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1426, 814);
+            this.ClientSize = new System.Drawing.Size(1070, 529);
             this.Controls.Add(this.reportDataGrid);
             this.Controls.Add(this.toolStrip1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ReportView";
             this.Text = "Xem in báo cáo";
             this.toolStrip1.ResumeLayout(false);
