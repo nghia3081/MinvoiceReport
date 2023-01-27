@@ -48,7 +48,10 @@ namespace MinvoiceReport
             this.Hide();
 
         }
-
+        private void onClose(object sender, EventArgs e)
+        {
+            Application.Exit(); 
+        }
         private void logoPanel_Click(object sender, EventArgs e)
         {
 

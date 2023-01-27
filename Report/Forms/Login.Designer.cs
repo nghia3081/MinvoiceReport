@@ -38,6 +38,7 @@ namespace MinvoiceReport
             this.taxCodeTxt = new System.Windows.Forms.TextBox();
             this.usernameTxt = new System.Windows.Forms.TextBox();
             this.passwordTxt = new System.Windows.Forms.TextBox();
+            this.FormClosed += onClose;
             ((System.ComponentModel.ISupportInitialize)(this.logoPanel)).BeginInit();
             this.SuspendLayout();
             // 
