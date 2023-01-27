@@ -2,8 +2,6 @@
 using MinvoiceReport.IServices;
 using MinvoiceReport.Models;
 using MinvoiceReport.Utils;
-using Newtonsoft.Json;
-using System.Data;
 using System;
 using System.Windows.Forms;
 using Report;
@@ -35,9 +33,9 @@ namespace MinvoiceReport.Forms
         }
         private void OnClose(object sender, EventArgs e)
         {
-
             Constant.LogOut();
             var LoginForm = Program.Container.Resolve<Login>();
+            LoginForm.Enabled = true;
             LoginForm.Show();
 
         }
@@ -49,6 +47,7 @@ namespace MinvoiceReport.Forms
         }
         private void ViewPdfOnclick(object sender, EventArgs e)
         {
+            this.Enabled = false;
             LoadingUtils.ShowProgress();
             if (Constant.REPORT_DATA.IsNull()) return;
             byte[] reportByte = _reportService.PrintReport(Constant.SelectedReport.WindowId, Constant.REPORT_DATA, 3);
@@ -58,10 +57,12 @@ namespace MinvoiceReport.Forms
             Process.Start(filePath + $"\\{Constant.SelectedReport.Name}_{DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss")}.pdf");
             LoadingUtils.HideProgress();
             Process.Start(filePath);
+            this.Enabled = true;
 
         }
         private void DownloadFileOnclick(object sender, EventArgs e)
         {
+            this.Enabled = false;
             LoadingUtils.ShowProgress();
             if (Constant.REPORT_DATA.IsNull()) return;
             byte[] reportByte = _reportService.PrintReport(Constant.SelectedReport.WindowId, Constant.REPORT_DATA, 2);
@@ -71,6 +72,7 @@ namespace MinvoiceReport.Forms
             Process.Start(filePath + $"\\{Constant.SelectedReport.Name}_{DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss")}.xlsx");
             LoadingUtils.HideProgress();
             Process.Start(filePath);
+            this.Enabled = true;
         }
     }
 }

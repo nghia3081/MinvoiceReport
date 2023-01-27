@@ -42,7 +42,7 @@ namespace MinvoiceReport.Utils
         {
             if (taxCode.IsNullOrEmpty()) throw new ArgumentNullException(nameof(taxCode));
             BASE_URL = string.Format(BASE_URL, taxCode);
-            return BASE_URL_TEST;
+            return BASE_URL;
         }
         public static ApiClient ChangeClient(ApiClient client)
         {

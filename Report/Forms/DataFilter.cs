@@ -91,6 +91,7 @@ namespace MinvoiceReport.Forms
         }
         private void SubmitBtnOnclick(object sender, EventArgs e)
         {
+            LoadingUtils.ShowProgress();
             JObject dataSubmit = new JObject();
             ReportInfo selectedReport = Constant.SelectedReport;
             foreach (var rpD in selectedReport.ReportInfoDetail)
@@ -130,10 +131,11 @@ namespace MinvoiceReport.Forms
                         }
                 }
             }
+
             var dataReport = _reportService.GetReportData(selectedReport.WindowId, dataSubmit);
             if (dataReport != null) Constant.REPORT_DATA = dataReport;
             this.Close();
-            LoadingUtils.ShowProgress();
+         
         }
     }
 }

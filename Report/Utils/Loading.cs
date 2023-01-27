@@ -1,4 +1,5 @@
 ﻿
+using MinvoiceReport.Extensions;
 using Report.Forms;
 using System.Threading;
 
@@ -20,7 +21,7 @@ namespace Report.Utils
             if (loadingForm != null)
                 return;
             Thread thread = new Thread(new ThreadStart(LoadingUtils.ShowForm));
-            thread.IsBackground = true;
+            thread.IsBackground = false;
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }
@@ -33,10 +34,12 @@ namespace Report.Utils
 
         static public void HideProgress()
         {
+            if (loadingForm.IsNull()) return;
             loadingForm.Invoke(new CloseDelegate(LoadingUtils.CloseForm));
         }
         static private void CloseForm()
         {
+            if (loadingForm.IsNull()) return;
             loadingForm.Close();
             loadingForm = null;
         }

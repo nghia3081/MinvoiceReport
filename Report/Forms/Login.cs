@@ -6,7 +6,6 @@ using System.Windows.Forms;
 using System;
 using System.Linq;
 using Report;
-using Report.Forms;
 using Report.Utils;
 
 namespace MinvoiceReport
@@ -29,6 +28,7 @@ namespace MinvoiceReport
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
+            this.Enabled= true;
             LoadingUtils.ShowProgress();
             string username = usernameTxt.Text;
             string password = passwordTxt.Text;
